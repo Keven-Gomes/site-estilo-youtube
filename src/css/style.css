@@ -1,0 +1,78 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.video-container {
+    background-color: #F7F7F7;
+    max-width: 900px;
+    display: grid;
+    grid:
+    "emphasis advertising"  
+    "emphasis suggested-list" ;
+    grid-template-columns: 1fr 270px;
+    grid-template-rows: 56px 1fr;
+    gap: 20px;
+    padding: 35px;
+}
+
+.emphasis {
+    grid-area: emphasis;
+}
+
+.advertising {
+    grid-area: advertising;
+}
+
+.video-container {
+    grid-area: video-container;
+}
+
+.video-container .emphasis img {
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.video-container .video-container .emphasis .tittle {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 7px;
+}
+
+.video-container .video-container .emphasis .subtittle {
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 7px;
+}
+
+.video-container .video-container .emphasis .description {
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+/*
+----------------------
+    |LIST-SUGGEST|
+----------------------
+*/
+
+.video-container .aside-video .suggested-list .video {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.video-container .aside-video .suggested-list .video h2 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.video-container .aside-video .suggested-list .video p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
