@@ -27,8 +27,8 @@ body {
     grid-area: advertising;
 }
 
-.video-container {
-    grid-area: video-container;
+.suggested-list {
+    grid-area: suggested-list;
 }
 
 .video-container .emphasis img {
@@ -36,19 +36,19 @@ body {
     width: 100%;
 }
 
-.video-container .video-container .emphasis .tittle {
+.video-container .video-container .emphasis .emphasis-text .tittle {
     font-weight: 700;
     font-size: 1.8rem;
     margin-bottom: 7px;
 }
 
-.video-container .video-container .emphasis .subtittle {
+.video-container .video-container .emphasis .emphasis-text .subtittle {
     font-weight: 300;
     font-size: 1.4rem;
     margin-bottom: 7px;
 }
 
-.video-container .video-container .emphasis .description {
+.video-container .video-container .emphasis .emphasis-text .description {
     font-weight: 300;
     font-size: 1.6rem;
 }
@@ -59,20 +59,38 @@ body {
 ----------------------
 */
 
-.video-container .aside-video .suggested-list .video {
+.video-container .advertising {
+    width: 100%;
+}
+
+.video-container .suggested-list .video {
     display: flex;
     gap: 5px;
     margin-bottom: 15px;
 }
 
-.video-container .aside-video .suggested-list .video h2 {
+.video-container .suggested-list .video h2 {
     font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 5px;
 }
 
-.video-container .aside-video .suggested-list .video p {
+.video-container .suggested-list .video p {
     font-weight: 300;
     font-size: 1.1rem;
     margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .video-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid:
+        "emphasis"
+        "advertising"
+        "suggested-list";
+    }
+    .emphasis {
+        width: 100%;
+    }
 }
